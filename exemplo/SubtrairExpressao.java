@@ -1,13 +1,13 @@
 class SubtrairExpressao implements Expressao {
-    private Expressao left, right;
+    private Expressao esquerda, direita;
 
-    public SubtrairExpressao(Expressao left, Expressao right) {
-        this.left = left;
-        this.right = right;
+    public SubtrairExpressao(Expressao esquerda, Expressao direita) {
+        this.esquerda = esquerda;
+        this.direita = direita;
     }
 
     @Override
     public int interpret() {
-        return left.interpret() - right.interpret();
+        return esquerda.interpret() - direita.interpret();
     }
 }
